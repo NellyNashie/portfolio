@@ -9,25 +9,34 @@
     <h1>Family Tree prolog using python programming</h1>
     <p>
         % Define relationships<br>
-parent(john, mary).<br>
-parent(mary, susan).<br>
-parent(susan, mike).<br>
-parent(mike, alex).<br>
-<br>
-% Define gender<br>
-male(john).<br>
-female(mary).<br>
-female(susan).<br>
-male(mike).<br>
-male(alex).<br>
-<br>
-% Define rules<br>
-mother(X, Y) :- parent(X, Y), female(X).<br>
-father(X, Y) :- parent(X, Y), male(X).<br>
-<br>
-% Define query examples<br>
-% ?- mother(mary, susan).<br>
-% ?- father(john, mary).<br>
+        parent(john, mary).<br>
+        parent(mary, susan).<br>
+        parent(susan, mike).<br>
+        parent(mike, alex).<br>
+        <br>
+        % Define gender<br>
+        male(john).<br>
+        female(mary).<br>
+        female(susan).<br>
+        male(mike).<br>
+        male(alex).<br>
+        <br>
+        % Define rules<br>
+        mother(Mother, Child) :- parent(Mother, Child), female(Mother).<br>
+        father(Father, Child) :- parent(Father, Child), male(Father).<br>
+        <br>
+        % Siblings are people who share at least one parent<br>
+        sibling(Sibling1, Sibling2) :- parent(Parent, Sibling1), parent(Parent, Sibling2), Sibling1 \= Sibling2.<br>
+        <br>
+        % Grandparents are parents of a parent<br>
+        grandparent(Grandparent, Grandchild) :- parent(Grandparent, Parent), parent(Parent, Grandchild).<br>
+        <br>
+        % Query examples<br>
+        % ?- mother(Mary, Child).<br>
+        % ?- father(John, Child).<br>
+        % ?- sibling(Mike, Alex).<br>
+        % ?- grandparent(Grandparent, Alex).<br>
+        <br>
 
     </p>
 </body>
