@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+</head>
+<body>
+    <h1>Grading System using python programming</h1>
+    <p>
+        def get_grade(score):<br>
+    if score >= 90:<br>
+        return 'A'<br>
+    elif score >= 80:<br>
+        return 'B'<br>
+    elif score >= 70:<br>
+        return 'C'<br>
+    elif score >= 60:<br>
+        return 'D'<br>
+    else:<br>
+        return 'F'<br>
+        <br>
+def main():<br>
+    print("Grading System")<br>
+    name = input("Enter student name: ")<br>
+    score = float(input("Enter student score (0-100): "))<br>
+    <br>
+    if 0 <= score <= 100:<br>
+        grade = get_grade(score)<br>
+        print(f"{name} received a grade of {grade}")<br>
+    else:<br>
+        print("Invalid score. Please enter a score between 0 and 100.")<br>
+        <br>
+if __name__ == "__main__":<br>
+    main()<br>
+    <br>
+    </p>
+</body>
+</html>

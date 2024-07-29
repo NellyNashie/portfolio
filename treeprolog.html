@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree using prolog</title>
+</head>
+<body>
+    <h1>Family Tree prolog using python programming</h1>
+    <p>
+        % Define relationships<br>
+parent(john, mary).<br>
+parent(mary, susan).<br>
+parent(susan, mike).<br>
+parent(mike, alex).<br>
+<br>
+% Define gender<br>
+male(john).<br>
+female(mary).<br>
+female(susan).<br>
+male(mike).<br>
+male(alex).<br>
+<br>
+% Define rules<br>
+mother(X, Y) :- parent(X, Y), female(X).<br>
+father(X, Y) :- parent(X, Y), male(X).<br>
+<br>
+% Define query examples<br>
+% ?- mother(mary, susan).<br>
+% ?- father(john, mary).<br>
+
+    </p>
+</body>
+</html>

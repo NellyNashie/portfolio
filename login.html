@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login interface</title>
+</head>
+<body>
+<h1>Login interface in Python Programming</h1>    
+    <p>
+        import tkinter as tk<br>
+from tkinter import messagebox<br>
+<br>
+# Function to validate login<br>
+def validate_login():<br>
+    username = entry_username.get()<br>
+    password = entry_password.get()<br>
+    if username == "admin" and password == "password":<br>
+        messagebox.showinfo("Login Status", "Login Successful")<br>
+    else:<br>
+        messagebox.showerror("Login Status", "Invalid Username or Password")<br>
+        <br>
+# Create main window<br>
+root = tk.Tk()<br>
+root.title("Login Interface")<br>
+<br>
+# Create and place labels and entries<br>
+tk.Label(root, text="Username").pack(pady=5)<br>
+entry_username = tk.Entry(root)<br>
+entry_username.pack(pady=5)<br>
+<br>
+tk.Label(root, text="Password").pack(pady=5)<br>
+entry_password = tk.Entry(root, show='*')<br>
+entry_password.pack(pady=5)<br>
+<br>
+# Create and place login button<br>
+btn_login = tk.Button(root, text="Login", command=validate_login)<br>
+btn_login.pack(pady=20)<br>
+<br>
+# Run the application<br>
+root.mainloop()<br>
+<br>
+    </p>
+</body>
+</html>
